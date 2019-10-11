@@ -24,7 +24,7 @@ public class Book {
 
 
     public static void main(String[] args) {
-
+        Book s1= new Book("Book",12,"wqeqe22",12 );
 
 
     }
