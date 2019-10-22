@@ -18,7 +18,7 @@ public class Exercise2 {
 
 
         String name,initial,lastName;
-        int distanceCycled,sponsered,sponsered2,fixedDistance;
+        int distanceCycled,sponsored,sponsored2,distanceCycled2,distanceCycled3;
 
         Scanner input = new Scanner(System.in);
 
@@ -33,16 +33,29 @@ public class Exercise2 {
         System.out.print("Distance cycled: ");
         distanceCycled=input.nextInt();
 
-        if( distanceCycled<=10) {
-            sponsered = distanceCycled * 7;
-            System.out.print("You got " +sponsered);}
+        if( distanceCycled<=10)
+              {
+            sponsored = distanceCycled * 7;
+            System.out.print("You got " +sponsored + 'c');
+              }
              else if ( distanceCycled >= 10)
-        {sponsered2 = ((distanceCycled-10)*10)+(distanceCycled*7);
-                 System.out.print("You got "+ sponsered2);
-        }
+              {
+                  distanceCycled2=distanceCycled-10;
+
+                  distanceCycled3=distanceCycled-distanceCycled2;
+
+                  sponsored=distanceCycled3*7;
+                  sponsored2= distanceCycled2*10;
+
+              System.out.print("You traveled " + distanceCycled + " km, " +
+                      " \nSo you got 7c sponsored for first " + distanceCycled3 + "km " +
+                      " which is " + sponsored + " c" + " \nand the remaining distance " + distanceCycled2 +
+                      " for 10c which is " +
+                       sponsored2 + " c" + " \nTotal is " + (sponsored + sponsored2) + " c");
+              }
 
 
 
 
-    }
+            }
 }

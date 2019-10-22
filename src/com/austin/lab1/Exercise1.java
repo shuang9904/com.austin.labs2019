@@ -11,22 +11,23 @@ public class Exercise1 {
         the number of snacks you asked for and what you will have to pay.*/
 
        String name,className;
-       int snack=2,snackno,snackmoney;
+       int snack=2,snackNo,snackCost;
 
        Scanner input = new Scanner(System.in);
 
-       System.out.print("enter your name: ");
+       System.out.print("Enter your name: ");
        name=input.nextLine();
 
-       System.out.print("\nyour class name: ");
+       System.out.print("Enter your class name: ");
        className=input.nextLine();
 
-       System.out.print("\nhow many snacks: ");
-       snackno=input.nextInt();
+       System.out.print("How many snacks do you want : ");
+       snackNo=input.nextInt();
 
-       snackmoney=snackno*snack;
+       snackCost=snackNo*snack;
 
-       System.out.println(name+"\n"+className+"\nYou have to pay " +snackmoney);
+       System.out.println("\n\nYour name:" + name + "\nClass Name: " + className+ "\nYou ordered "+
+               snackNo + " snacks" + "\nNow you have to pay " + snackCost);
 
 
 
