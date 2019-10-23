@@ -1,31 +1,27 @@
 package com.austin.lab2;
-
 public class Book {
-    String ISBM , title;
-    double price;
-    int pageNum;
+    private String title;
+    private int numPages;
+    private String isbn;
+    private double price;
 
-    Book(String title , double price , String ISBM , int pageNum  ){
-      this.title = title;
-      this.price = price;
-      this.ISBM = ISBM;
-      this.pageNum = pageNum;
-    }
-    public String toString(){
-        return title + price + ISBM + pageNum;
-    }
-    static void accessor(){
+// accessor and mutator methods
 
-
-    }
-    static void mutator(){
-
+    // accessor method
+    public String getTitle() {
+        return title;
     }
 
+    //mutator method
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-    public static void main(String[] args) {
-        Book s1= new Book("Book",12,"wqeqe22",12 );
+    public int getNumPages() {
+        return numPages;
+    }
 
-
+    public void setNumPages(int numPages) {
+        this.numPages = numPages;
     }
 }

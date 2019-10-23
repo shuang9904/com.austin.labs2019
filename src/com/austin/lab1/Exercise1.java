@@ -1,33 +1,26 @@
 package com.austin.lab1;
-import java.util.Scanner;
+import javax.swing.*;
 
 public class Exercise1 {
     public static void main(String[] args) {
-       /* A simple calculation. The canteen is offering a special
-        start-of-year mineral-and-muffin snack deal at 2 euro per
-        snack. Write a program which will ask you to enter your name,
-        your class name and how many snacks you’d like, and
-        which will calculate and display in a dialog your name and class,
-        the number of snacks you asked for and what you will have to pay.*/
+         String GbpAsString;
+         int i;
+         float Gbp;
+         double convertRate=1.1512,euro;
 
-       String name,className;
-       int snack=2,snackNo,snackCost;
+         do {
+             GbpAsString = JOptionPane.showInputDialog("Enter the GBP amount you want to convert:");
+             Gbp = Float.parseFloat(GbpAsString);
 
-       Scanner input = new Scanner(System.in);
 
-       System.out.print("Enter your name: ");
-       name=input.nextLine();
+        euro = Gbp * convertRate;
 
-       System.out.print("Enter your class name: ");
-       className=input.nextLine();
 
-       System.out.print("How many snacks do you want : ");
-       snackNo=input.nextInt();
+            JOptionPane.showMessageDialog(null, "You entered "+ Gbp +"Gbp. This is the converted rate:" +
+                    String.format("%.4f", euro), "GBP converted", JOptionPane.INFORMATION_MESSAGE);
+    }while (Gbp!=0);
+        System.exit(0);
 
-       snackCost=snackNo*snack;
-
-       System.out.println("\n\nYour name:" + name + "\nClass Name: " + className+ "\nYou ordered "+
-               snackNo + " snacks" + "\nNow you have to pay " + snackCost);
 
 
 
